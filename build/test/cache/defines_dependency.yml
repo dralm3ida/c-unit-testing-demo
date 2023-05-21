@@ -1,0 +1,9 @@
+---
+src/Demo.c:
+- TEST
+build/test/mocks/mock_Demo.c:
+- TEST
+src/main.c:
+- TEST
+build/test/mocks/mock_GlobalDefs.c:
+- TEST

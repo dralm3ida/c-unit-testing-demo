@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "demoprime.h": "c",
+        "demo.h": "c",
+        "globaldefs.h": "c",
+        "unity.h": "c",
+        "functional": "c",
+        "mock_demo.h": "c",
+        "main.h": "c",
+        "mock_globaldefs.h": "c"
+    }
+}
