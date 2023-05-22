@@ -8,6 +8,8 @@
         "functional": "c",
         "mock_demo.h": "c",
         "main.h": "c",
-        "mock_globaldefs.h": "c"
+        "mock_globaldefs.h": "c",
+        "primenumbers.h": "c",
+        "mock_primenumbers.h": "c"
     }
 }

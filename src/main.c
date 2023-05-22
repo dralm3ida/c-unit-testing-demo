@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "Demo.h"
 
 int main (int argc, char **argv)
 {
@@ -7,11 +7,7 @@ int main (int argc, char **argv)
    printf("Enter any number n:");
    scanf("%d", &n);
 
-   if (is_prime_number(n) == TRUE) {
-      printf("n = %d is a Prime number", n);
-   } else {
-      printf("n = %d is not a Prime number", n);
-   }
+   validate_result(n);
 
    return 0;
 }

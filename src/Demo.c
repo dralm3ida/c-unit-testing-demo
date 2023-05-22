@@ -1,19 +1,9 @@
 #include "Demo.h"
 
-BOOLEAN is_prime_number(int number) {
-   int i, n_factors = 0;
-
-   if (number <= 1) {
-      return FALSE;
+void validate_result(int number) {
+   if (is_prime_number(number) == TRUE) {
+      printf("n = %d is a Prime number", number);
+   } else {
+      printf("n = %d is not a Prime number", number);
    }
-
-   for (i = 1; i <= number; i++) {
-      if (number % i == 0) {
-         n_factors++;
-      }
-   }
-   if (n_factors == 2) {
-      return TRUE;
-   }
-   return FALSE;
 }

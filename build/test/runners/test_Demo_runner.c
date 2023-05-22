@@ -2,6 +2,8 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
+#include "cmock.h"
+#include "mock_PrimeNumbers.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -10,8 +12,8 @@ char* GlobalOrderError;
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_Demo_isPrimeNumber_FALSE(void);
-extern void test_Demo_isPrimeNumber_TRUE(void);
+extern void test_Demo_validateResult_isPrime(void);
+extern void test_Demo_validateResult_isNotPrime(void);
 
 
 /*=======Mock Management=====*/
@@ -20,12 +22,15 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
+  mock_PrimeNumbers_Init();
 }
 static void CMock_Verify(void)
 {
+  mock_PrimeNumbers_Verify();
 }
 static void CMock_Destroy(void)
 {
+  mock_PrimeNumbers_Destroy();
 }
 
 /*=======Test Reset Options=====*/
@@ -76,8 +81,9 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_Demo.c");
-  run_test(test_Demo_isPrimeNumber_FALSE, "test_Demo_isPrimeNumber_FALSE", 15);
-  run_test(test_Demo_isPrimeNumber_TRUE, "test_Demo_isPrimeNumber_TRUE", 32);
+  run_test(test_Demo_validateResult_isPrime, "test_Demo_validateResult_isPrime", 14);
+  run_test(test_Demo_validateResult_isNotPrime, "test_Demo_validateResult_isNotPrime", 24);
 
+  CMock_Guts_MemFreeFinal();
   return UnityEnd();
 }

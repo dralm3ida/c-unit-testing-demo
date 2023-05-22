@@ -95,6 +95,7 @@
     uint32: UINT32
     int8: INT8
     bool: UINT8
+  :treat_externs: :include
   :mock_path: build/test/mocks
   :verbosity: 3
   :unity_helper: false

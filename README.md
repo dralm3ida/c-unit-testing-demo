@@ -21,7 +21,7 @@ Unit testing Demo for C language
    ```console
    ruby.exe --version
    ```
- - `Ceedling` - Ceedling is a Ruby gem that takes care of all the setup, building, and running of C unit tests. Ceedling is primarily targeted at Test-Driven Development in C.  Ceedling includes a test framework (Unity), a mocking framework (CMock), and CException. See [Tutorial](https://embetronicx.com/tutorials/unit_testing/unit-testing-in-c-part-3-ceedling-installation/).
+ - `Ceedling` - Ceedling is a Ruby gem that takes care of all the setup, building, and running of C unit tests. Ceedling is primarily targeted at Test-Driven Development in C.  Ceedling includes a test framework (Unity), a mocking framework (CMock), and CException. See [Tutorial](http://www.electronvector.com/blog/add-unit-tests-to-your-current-project-with-ceedling).
    ```console
    gem install ceedling
    ceedling version
@@ -43,8 +43,8 @@ bin/demo.exe
 ```console
 ceedling new <project_name> # creates a new project with 'src' and 'test' folders and 'project.yml' file
 ceedling module:create[<module_name>] # creates 'module.c', 'module.h' and 'test_module.c' files
-ceedling test:all # Runs all tests
-ceedling gcov:all # Runs tests with line coverage
-ceedling utils:gcov
+ceedling test:all   # Runs all tests
+ceedling gcov:all   # Runs tests with line coverage
+ceedling utils:gcov # Produces detailed HTML Report
 ceedling clean
 ```
